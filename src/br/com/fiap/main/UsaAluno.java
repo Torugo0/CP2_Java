@@ -60,6 +60,7 @@ public class UsaAluno {
             JOptionPane.showMessageDialog(null, "RM: " + p1.getRm() + " - NOME: " + p1.getNome() + " - IDADE COMPLETA: " + p1.calculaIdadeCompleta(dataAtual));
             JOptionPane.showMessageDialog(null, "RM: " + p2.getRm() + " - NOME: " + p2.getNome() + " - Idade completa: " + p2.calculaIdadeCompleta(dataAtual));  
 
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
