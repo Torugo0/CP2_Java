@@ -49,12 +49,12 @@ public class Aluno {
     }
     public void setDataDeNascimento(LocalDate dataDeNascimento) {
         LocalDate minimo = LocalDate.parse("1899-12-31");
-        LocalDate anoAtual = LocalDate.now(); // Pega a data atual do sistema
+        LocalDate dataAtual = LocalDate.now(); // Pega a data atual do sistema
         try {
-            if (dataDeNascimento.isAfter(minimo) && dataDeNascimento.isBefore(anoAtual)) {
+            if (dataDeNascimento.isAfter(minimo) && dataDeNascimento.isBefore(dataAtual)) {
                 this.dataDeNascimento = dataDeNascimento; // Caso esteja tudo dentro da regra de negocios ele setta a data.
             } else {
-                throw new Exception("Data fora da faixa permitida (1900-01-01" + " - " + anoAtual + ")");
+                throw new Exception("Data fora da faixa permitida (01/01/1900" + " - " + dataAtual.getDayOfMonth() +"/0"+dataAtual.getMonthValue()+"/"+dataAtual.getYear()+ ")");
                 
             }
         } catch (Exception e) {
